@@ -13,7 +13,7 @@
     <h1>Hangman</h1>
     <p>Find the hidden word by entering a letter.</p>
     <div class="hangman-container">
-        <svg height="250" width="200" class="figure-container">
+        <svg class="figure-container">
             <!-- Head -->
             <circle cx="140" cy="70" r="20" class="figure-part" />
             <!-- Rod/Noose -->
@@ -30,10 +30,36 @@
             <line x1="140" y1="150" x2="120" y2="180" class="figure-part" />
             <line x1="140" y1="150" x2="160" y2="180" class="figure-part" />
         </svg>
-        <div class="wrong-letters-container">
+        <div id="wrong-letters-container">
             <p>Wrong</p>
-            <span>a</span>,<span>b</span>,<span>c</span>,<span>d</span>,<span>e</span>,<span>f</span>
+
         </div>
+        <div id="word-container">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- Container for final message -->
+    <div id="popup-container">
+        <div id="modal">
+            <h2>Congratulations!<br>You won! 😃</h2>
+            <button>Play Again</button>
+        </div>
+    </div>
+    <!-- Notification -->
+    <div id="notification-container">
+        <p>You have already entered this letter</p>
     </div>
 </body>
 
