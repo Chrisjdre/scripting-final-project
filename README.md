@@ -21,3 +21,9 @@ In part 1 we were introduced to JavaScript and how it relates to python. We went
 
 In Part 2 we went over writing text to the screen in javascript using `document.write`, and then we learned how to attach an external javascript file like the jquery library, lastly we learned how to track down errors in our code using the developer tools in the web browser.
  
+## Chapter 2
+
+### part 1
+In part 1 we went over alert statements and print statements using javascript, We then went over variables how to declare variables and what we can do with variables ex. `var age = 19;` and then adding ex. `age++` and lastly we went over combining strings ex.`console.log(firstName + " " + lastName);");` and combing string and numbers ex `console.log("You have " + score + " points");`.
+### part 2
+Part 2 was quick but had a lot of information, first, we started with arrays and how to declare them, modify them by adding, cutting, pushing, and popping. ex `var nums = [1, 2, 3, 4];` There is quite a bit you can do with arrays. The other thing we went over was objects, we just scratched the surface but there was a lot of content.
