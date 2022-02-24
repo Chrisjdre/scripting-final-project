@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hangman</title>
     <link href="style.css" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -31,36 +32,25 @@
             <line x1="140" y1="150" x2="160" y2="180" class="figure-part" />
         </svg>
         <div id="wrong-letters-container">
-            <p>Wrong</p>
-
+            <p>Wrong letters</p>
+            
         </div>
         <div id="word-container">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+           
         </div>
     </div>
     <!-- Container for final message -->
     <div id="popup-container">
         <div id="modal">
-            <h2>Congratulations!<br>You won! 😃</h2>
-            <button>Play Again</button>
+            <h2 id="final-message">Congratulations!<br>You won! 😃</h2>
+            <button id="play-button">Play Again</button>
         </div>
     </div>
     <!-- Notification -->
     <div id="notification-container">
-        <p>You have already entered this letter</p>
+        <p>You have already entered the letter <span id="letter-already-entered"> </span></p>
     </div>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
