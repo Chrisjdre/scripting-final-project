@@ -54,7 +54,7 @@ function updateWrongLetters() {
     });
     if (wrongLetters.length === figure_parts.length) {
         const finalMessage = document.getElementById('final-message');
-        finalMessage.innerHTML = 'Unfortunately,<br>you lost. 😞';
+        finalMessage.innerHTML = 'Unfortunately,<br>you lost. 😞<br> The word was: ' + selectedWord;
         const popup = document.getElementById('popup-container');
         popup.style.display = 'flex';
         gamePlaying = false;
@@ -98,9 +98,9 @@ window.addEventListener("keydown", function(event){
 
 let selectedWord;
 function getRandomWord(){
-    const words = ["Butterfly", "Car", "Steak", "Bubblegum", "Napkin", "Pancakes", "eggs","turkey","barbell","squat", "protein"];
+    // const words = wordsp;
     const rand = Math.floor(Math.random() * words.length)
-    selectedWord = words[rand].toLowerCase();
+    selectedWord = words[rand][0].toLowerCase();
     return selectedWord;
 }
 
