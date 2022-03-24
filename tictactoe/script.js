@@ -103,11 +103,11 @@ function markBoard(row, col){
         if(board[row][col] === ''){
             board[row][col] = currentPlayer;
             drawMark(row, col);
-            console.log(board)
+            
             marked = true;
             checkWinner();
         }else{
-            console.log("spot is being used");
+            
         }
     // }
     return marked;
@@ -244,8 +244,16 @@ ticTacToeContainer.addEventListener("click",function(event){
         if(marked){
             switchPlayer();
         }
-        console.log(row,col);
+        
     }
  });
 
 main();
+
+for(let row=0; row<=5; row++){
+    for(let col=0;col<=5;col++){
+        if(row >= col){
+           
+        }
+    }
+}

@@ -98,7 +98,7 @@ window.addEventListener("keydown", function(event){
 
 let selectedWord;
 function getRandomWord(){
-    // const words = wordsp;
+    // const words = ;
     const rand = Math.floor(Math.random() * words.length)
     selectedWord = words[rand][0].toLowerCase();
     return selectedWord;
@@ -115,7 +115,7 @@ function displayword(){
     wordEl.innerHTML=result;
 
     const innerLetters = wordEl.innerText.replace(/\n/g, '');;
-    console.log(innerLetters);
+    
     if (innerLetters === selectedWord) {
         gamePlaying = false;
         const finalMessage = document.getElementById('final-message');

@@ -27,3 +27,10 @@ In Part 2 we went over writing text to the screen in javascript using `document.
 In part 1 we went over alert statements and print statements using javascript, We then went over variables how to declare variables and what we can do with variables ex. `var age = 19;` and then adding ex. `age++` and lastly we went over combining strings ex.`console.log(firstName + " " + lastName);");` and combing string and numbers ex `console.log("You have " + score + " points");`.
 ### part 2
 Part 2 was quick but had a lot of information, first, we started with arrays and how to declare them, modify them by adding, cutting, pushing, and popping. ex `var nums = [1, 2, 3, 4];` There is quite a bit you can do with arrays. The other thing we went over was objects, we just scratched the surface but there was a lot of content.
+
+## Chapter 3
+
+### part 1
+In part 1 we learned about using conditional statements to make our programs better. We also learned about the conditional operators like ``` && , || ``` and then we also learned about loops and what they do.
+### part 2
+In part 2 we learned about how to put our codes in functions which are like classes in java. I think this will be very important because we can use these functions that we build to reuse in our code making the programs runs more efficiently.
