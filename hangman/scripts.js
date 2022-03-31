@@ -52,6 +52,7 @@ function updateWrongLetters() {
         }
 
     });
+    
     if (wrongLetters.length === figure_parts.length) {
         const finalMessage = document.getElementById('final-message');
         finalMessage.innerHTML = 'Unfortunately,<br>you lost. 😞<br> The word was: ' + selectedWord;
