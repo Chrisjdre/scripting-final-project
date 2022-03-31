@@ -66,4 +66,8 @@ h1, h2 {
     justify-content: center;
 
   }
-  
+  #help, #settings{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }

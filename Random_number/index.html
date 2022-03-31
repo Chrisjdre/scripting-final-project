@@ -9,9 +9,9 @@
 </head>
 <body>
     <h1> Number Guessing Game </h1>
-    <h2>Guess a number from 0 to 100<br></h2>
+    <h2 id="rangetitle">Guess a number from 0 to 100<br></h2>
     <div id="guessing">
-        <label for="guessField">Make a guess: </label>
+        <label>Make a guess: </label>
         <input type = "text" id = "guessField" >
         <input type = "submit" value = "Submit guess" id = "guess">
     </div>
@@ -33,9 +33,17 @@
     </div>
     <div id="popup-container2">
         <div id="modal">
-            <h2 id="wrong-message">welcome to Number Guessing Game<br>  Click play to begin </h2>
+            <h2 id="wrong-message">Welcome to Number Guessing Game<br>  Click play to begin </h2>
             <button id="continue">Try Again</button>
         </div>
+    </div>
+    <div id="help">
+        <input type = "submit" value = "help" id = "help">
+    </div>
+    <div id="settings">
+        <input type = "submit" value = "0 to 10" id = "10">
+        <input type = "submit" value = "0 to 100" id = "100">
+        <input type = "submit" value = "0 to 1000" id = "1000">
     </div>
 
 
