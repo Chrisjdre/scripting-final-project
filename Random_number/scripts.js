@@ -8,9 +8,11 @@ const notification = document.getElementById('notification-container');
 const titlerange = document.getElementById('notification-container');
 const continueMessage = document.getElementById('wrong-message');
 const continuebutton = document.getElementById('continue');
-var userGuess = document.getElementById("guessField").value;
+
 let gamePlaying = true;
 var changeNumber = 100;
+
+
 
  
 
@@ -30,14 +32,14 @@ continueBtn.addEventListener('click', function(){
 // get the random number method
 function getRandomNumber(changeNumber){
     randomNumber = Math.floor(Math.random() * changeNumber + 1);
-    console.log(randomNumber);
     return randomNumber;
     
 }
 // checking to see if the number guessed is right
 var guess = 1;
 document.getElementById("guess").onclick = function(){
-  
+    var userGuess = document.getElementById("guessField").value;
+
     if(userGuess == randomNumber)
     {    
         const finalMessage = document.getElementById('final-message');
@@ -50,15 +52,15 @@ document.getElementById("guess").onclick = function(){
     }else if(userGuess > randomNumber) 
     {    
         guess++;
-        
+        const continueMessage = document.getElementById('wrong-message');
         continueMessage.innerHTML = 'Sorry <br>That guess was to high';
         popupwrong.style.display = 'flex';
         
-    }else
+    }else if (userGuess < randomNumber)
     {
         guess++;
-        
-        continueMessage.innerHTML = 'Sorry <br>That guess was to low';
+        const continueMessage = document.getElementById('wrong-message');
+        continueMessage.innerHTML = 'Sorry <br>That guess was to low!!!';
         popupwrong.style.display = 'flex';
     }
 
@@ -78,14 +80,14 @@ document.addEventListener("keyup", function(event) {
         }else if(userGuess > randomNumber) 
         {    
             guess++;
-            
+            const continueMessage = document.getElementById('wrong-message');
             continueMessage.innerHTML = 'Sorry <br>That guess was to high';
             popupwrong.style.display = 'flex';
             
         }else
         {
             guess++;
-            
+            const continueMessage = document.getElementById('wrong-message');
             continueMessage.innerHTML = 'Sorry <br>That guess was to low';
             popupwrong.style.display = 'flex';
         }
