@@ -39,7 +39,14 @@ function getRandomNumber(changeNumber){
 var guess = 1;
 document.getElementById("guess").onclick = function(){
     var userGuess = document.getElementById("guessField").value;
-
+    if(userGuess > changeNumber || userGuess < 0){
+        guess++;
+        const continueMessage = document.getElementById('wrong-message');
+        continueMessage.innerHTML = 'Sorry <br>That guess it out of the current play range';
+        popupwrong.style.display = 'flex';
+        document.getElementById("guessField").value = "";
+        
+    }
     if(userGuess == randomNumber)
     {    
         const finalMessage = document.getElementById('final-message');
@@ -49,7 +56,8 @@ document.getElementById("guess").onclick = function(){
         button.innerHTML = 'play again';
         popup.style.display = 'flex';
         gamePlaying = false;
-    }else if(userGuess > randomNumber) 
+        document.getElementById("guessField").value = "";
+    }else if(userGuess > randomNumber && userGuess <= changeNumber) 
     {    
         guess++;
         const continueMessage = document.getElementById('wrong-message');
@@ -66,8 +74,19 @@ document.getElementById("guess").onclick = function(){
 
 
 }
+// code to make enter key work
+
 document.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
+        var userGuess = document.getElementById("guessField").value;
+        if(userGuess > changeNumber || userGuess < 0){
+            guess++;
+            const continueMessage = document.getElementById('wrong-message');
+            continueMessage.innerHTML = 'Sorry <br>That guess it out of the current play range';
+            popupwrong.style.display = 'flex';
+            document.getElementById("guessField").value = "";
+            
+        }
         if(userGuess == randomNumber)
         {    
             const finalMessage = document.getElementById('final-message');
@@ -77,14 +96,15 @@ document.addEventListener("keyup", function(event) {
             button.innerHTML = 'play again';
             popup.style.display = 'flex';
             gamePlaying = false;
-        }else if(userGuess > randomNumber) 
+            document.getElementById("guessField").value = "";
+        }else if(userGuess > randomNumber && userGuess <= changeNumber) 
         {    
             guess++;
             const continueMessage = document.getElementById('wrong-message');
             continueMessage.innerHTML = 'Sorry <br>That guess was to high';
             popupwrong.style.display = 'flex';
             
-        }else
+        }else if(userGuess < randomNumber)
         {
             guess++;
             const continueMessage = document.getElementById('wrong-message');
@@ -93,6 +113,8 @@ document.addEventListener("keyup", function(event) {
         }
     }
 });
+// help button code 
+
 document.getElementById("help").onclick = function(){
     if(guess > 0 && guess <=5){
         if(randomNumber%2 == 0){

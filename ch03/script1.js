@@ -5,9 +5,9 @@ startBtn.addEventListener('click', function() {
     var numbers = "";
         var sum = 0;
         var iter = 0;
-        while(sum >= 0){
+        while(iter >= 0){
             var numbers = prompt("Give number, enter Q to quit");
-            if('Q' === numbers){
+            if('Q' === numbers || 'q' === numbers){
                 break;
             }
             if(isNaN(numbers)){
