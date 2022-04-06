@@ -1,7 +1,8 @@
 var startBtn = document.getElementById('start');
+var goBtn = document.getElementById('go');
+const result = document.getElementById('result');
 
 startBtn.addEventListener('click', function() {
-    console.log("hello");
     var numbers = "";
         var sum = 0;
         var iter = 0;
@@ -23,4 +24,24 @@ startBtn.addEventListener('click', function() {
         console.log("Count " + iter);
         console.log("average " + average);
     
+});
+
+
+goBtn.addEventListener('click', function() {
+    console.log("hello");
+    var max = prompt("Give number");
+    var min = prompt("Give me a smaller number");
+    if (min > max){
+        var temp = max;
+        max = min;
+        min = temp;
+    }
+    console.log(max);
+    console.log(min);
+    result.innerHTML = "Max: " + max + "<br> Min: " + min;
+    do{
+        var betweenNumber = prompt("Give me a number in between those to numbers");
+    }while(betweenNumber > max || betweenNumber < min);
+    console.log(betweenNumber);
+    result.innerHTML = "Max: " + max + "<br> Min: " + min + "<br> numberBetween: " + betweenNumber;
 });
