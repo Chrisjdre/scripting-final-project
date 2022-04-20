@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.buttons i {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.buttons i:hover {
+    color: red;
+}
+
+.buttons i.active {
+    color: dodgerblue;
+}
+
+.products {
+    list-style:none;
+    padding: 0;
+    font-size: 0; /* remove gap between child inline-block elements */
+}
+
+.products li {
+    padding: 10px;
+    border: 1px solid #aaa;
+    margin: 0 1% 1% 0; /* top right bottom left */
+    font-size: 16px;
+}
+
+.products li:last-of-type {
+    margin-right: 0;
+}
+
+.vertical {
+    display: block;
+    width: 100%;
+}
+
+.horizontal {
+    display: inline-block;
+    width: 24%;
+}

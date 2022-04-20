@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication game</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <h1> Multiplication game </h1>
+    <h2 id="rangetitle">Each player answer the question first one wrong losses<br></h2>
+    <h2 id="Question"></h2>
+    <h2 id="Player"></h2>
+    <div id="guessing">
+        <label>Answer: </label>
+        <input type = "text" id = "answerField" class = "answerField" >
+        <input type = "submit" value = "Submit Answer" id = "Answer">
+    </div>
+    <div>
+        <h1>Current High Score</h1>
+        <h2 id="highscore"></h2>
+    </div>
+
+
+
+    <div id="popup-container">
+        <div id="modal">
+            <h2 id="final-message">welcome to the Multiplication game <br>  Click play to begin </h2>
+            <button id="play-button">Play</button>
+        </div>
+    </div>
+    <div id="popup-container2">
+        <div id="modal">
+            <h2 id="wrong-message">You didnt enter a number<br>  please enter a number! </h2>
+            <button id="continue">Try Again</button>
+        </div>
+    </div>
+    
+   
+
+
+
+</body>
+<script src="scripts.js" type="module"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</html>

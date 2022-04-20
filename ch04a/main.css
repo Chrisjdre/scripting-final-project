@@ -1,0 +1,81 @@
+
+/* to-do list css */
+
+/* * {
+    max-width: 100%;
+}
+
+body {
+    margin: 0;
+    font-family:'Courier New', Courier, monospace;
+}
+
+h1 {
+    font-size: 48px;
+    text-align: center;
+    color: green;
+}
+
+#to-do-list, #newItem {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    width: 300px;
+    margin: 0 auto 50px;
+}
+
+#to-do-list li {
+    border: 1px solid black;
+    display: block;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+#languages li:hover {
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+textarea {
+    font-size: 30px;
+} */
+
+/* form submitting css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-sizing;
+    max-width: 100%;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 20% 40% 40%;
+    gap: 10px 20px;
+}
+
+label {
+    grid-column-start: 1;
+    grid-column-end: 2; 
+    text-align: right;
+}
+
+input, select, .boxes {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.error {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    color: red;
+    font-style: italic;
+}
+
+@media screen and (min-width: 540px) {
+    .box.radio {
+        display: inline-block;
+    }
+}
