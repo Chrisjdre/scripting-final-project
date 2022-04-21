@@ -16,7 +16,7 @@ var avgage = 0;
 // filters 
 
     $("#male-filter").click(function() {
-        console.log("hello");
+        
         if(!$("#male-filter").is(":checked")){
             $( ".male" ).parent().hide();
 
