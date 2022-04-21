@@ -34,3 +34,9 @@ Part 2 was quick but had a lot of information, first, we started with arrays and
 In part 1 we learned about using conditional statements to make our programs better. We also learned about the conditional operators like ``` && , || ``` and then we also learned about loops and what they do.
 ### part 2
 In part 2 we learned about how to put our codes in functions which are like classes in java. I think this will be very important because we can use these functions that we build to reuse in our code making the programs runs more efficiently.
+
+
+## Chapter 4
+
+### Part 1
+In 1 we started learning jquery starting with JQuery selectors `$()` Than we learned about the DOM. We went over the html selector and the text selector. We than continued into more selectors like `.val(), .hide(), and .show()`. One of the big things we learned was `.append()` which seems to be a very useful thing for the future. There was also a `addClass(), removeClass()`. There was only 1 part but it was packed with alot of information, JQuery also seems to make things a ton easier rather than using just vanilla javascript. 

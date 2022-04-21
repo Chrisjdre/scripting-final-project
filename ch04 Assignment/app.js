@@ -168,7 +168,7 @@ var avgage = 0;
                 $("." + firstName + lastName).append("<td class = ' terms'>" + terms + "</td>");
                 $("." + firstName + lastName).append("<td class = '" + newsletter + "'>" + newsletter + "</td>");
                 $("." + firstName + lastName).append("<td class = '" + gender + "'>" + gender + "</td>" + "</tr>");
-                $("#averageAge").html(avgage);
+                $("#averageAge").html(avgage.toFixed(2));  
                 // $('form').get(0).reset();
             }else{
                 $('input[type="submit"]').after('<div class="error">Someone has that name already </div>');
