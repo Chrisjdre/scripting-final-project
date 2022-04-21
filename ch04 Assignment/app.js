@@ -12,11 +12,53 @@ var avgage = 0;
         return regex.test(str);
     }
 
+   
+// filters 
+
+    $("#male-filter").click(function() {
+        console.log("hello");
+        if(!$("#male-filter").is(":checked")){
+            $( ".male" ).parent().hide();
+
+        }
+        if($("#male-filter").is(":checked")){
+            $( ".male" ).parent().show();
+        }
+    });
+    $("#female-filter").click(function() {
+        if(!$("#female-filter").is(":checked")){
+            $( ".female" ).parent().hide();
+
+        }
+        if($("#female-filter").is(":checked")){
+            $( ".female" ).parent().show();
+        }
+    });
+    $("#Non-binary-filter").click(function() {
+        if(!$("#Non-binary-filter").is(":checked")){
+            $( ".nonbinary" ).parent().hide();
+
+        }
+        if($("#Non-binary-filter").is(":checked")){
+            $( ".nonbinary" ).parent().show();
+        }
+    });
+    $("#newsletter-filter").click(function() {
+        if(!$("#newsletter-filter").is(":checked")){
+            $( ".true" ).parent().hide();
+
+        }
+        if($("#newsletter-filter").is(":checked")){
+            $( ".true" ).parent().show();
+        }
+    });
+// end of filters
 
 
     $("#state").click(function() {
         $("#state option").first().attr("disabled", true);
     });
+
 
     $("#register").submit((event) => {
         event.preventDefault();
@@ -116,7 +158,6 @@ var avgage = 0;
                 localStorage.setItem("allPeople", JSON.stringify(allPeople));
 
 
-
                 $("#tbody").append('<tr class="' + firstName + lastName + '"></tr>');
                 $("." + firstName + lastName).append("<td class = 'fname'>" + firstName + "</td>");
                 $("." + firstName + lastName).append("<td class = 'lname'>" + lastName + "</td>");
@@ -124,11 +165,11 @@ var avgage = 0;
                 $("." + firstName + lastName).append("<td class = 'password'>" + password + "</td>");
                 $("." + firstName + lastName).append("<td class = 'age'>" + age + "</td>");
                 $("." + firstName + lastName).append("<td class = 'state'>" + state + "</td>");
-                $("." + firstName + lastName).append("<td class = 'terms'>" + terms + "</td>");
-                $("." + firstName + lastName).append("<td class = 'newletter'>" + newsletter + "</td>");
-                $("." + firstName + lastName).append("<td class = 'gender'>" + gender + "</td>" + "</tr>");
+                $("." + firstName + lastName).append("<td class = ' terms'>" + terms + "</td>");
+                $("." + firstName + lastName).append("<td class = '" + newsletter + "'>" + newsletter + "</td>");
+                $("." + firstName + lastName).append("<td class = '" + gender + "'>" + gender + "</td>" + "</tr>");
                 $("#averageAge").html(avgage);
-                $('form').get(0).reset();
+                // $('form').get(0).reset();
             }else{
                 $('input[type="submit"]').after('<div class="error">Someone has that name already </div>');
             }
@@ -151,12 +192,12 @@ var avgage = 0;
         personList.append(`<td class = 'age'> ${person[4]} </td>`);
         personList.append(`<td class = 'state'> ${person[5]} </td>`);
         personList.append(`<td class = 'terms'> ${person[6]} </td>`);
-        personList.append(`<td class = 'newletter'> ${person[7]} </td>`);
-        personList.append(`<td class = 'gender'>${person[8]} </td>`);
+        personList.append(`<td class = '${person[7]}'> ${person[7]} </td>`);
+        personList.append(`<td class = '${person[8]}'>${person[8]} </td>`);
         totalage = person[9];
         numpeople = person[10];
         avgage = totalage/numpeople;
-        $("#averageAge").html(avgage);
+        $("#averageAge").html(avgage.toFixed(2));
 
         $("#tbody").append(personList);
     });

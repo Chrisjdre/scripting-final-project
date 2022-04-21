@@ -2,6 +2,7 @@ body {
     font-family: sans-serif;
     padding: 0.5em;
     margin: 0;
+    display: table;
   }
   
   
@@ -29,33 +30,12 @@ body {
     grid-template-columns: 2fr 5fr 3fr;
     
   }
-  
+  /* tr:has >.male{
+    display: none;
+  } */
   .light-mode{
     background-color: white;
     color:black;
-    /* $("body").css({
-      "background-color": "white"
-      , "color" : "black"
-  });
-  $("form").css({
-      "background-color": "white"
-      , "color" : "black"
-  });
-  $("table").css({
-      "border": "1px solid black"
-      , "color" : "black"
-      
-  });
-  $("th , td, tr").css({
-      "border": "1px solid black"
-      , "color" : "black"
-      
-  });
-  $(".toggle-border").css("border-color", "black");
-  $(".toggle-indicator").css({
-      "background-color" : "black"
-      ,"left": "2px"
-  }); */
   }
   .light-mode body{
     color: black;
@@ -92,28 +72,6 @@ body {
     background-color: black;
     color: white;
     border: 1px solid white;
-
- 
-  /* $("form").css({ 
-      "background-color": "black"
-      , "color" : "white"
-      
-  });
-  $("table").css({
-      "border": "1px solid white"
-      , "color" : "white"
-      
-  });
-  $("th , td, tr").css({
-      "border": "1px solid white"
-      , "color" : "white"
-      
-  });
-  $(".toggle-border").css("border-color", "white");
-  $(".toggle-indicator").css({
-      "background-color" : "white"
-      ,"left": "22px"
-  });  */
   }
   .dark-mode form{
     background-color: black;
